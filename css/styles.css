@@ -203,7 +203,7 @@ overflow: hidden;
 }
 
 .main-foto:hover .background{
-	opacity: 0.9;
+	background: linear-gradient( to top, rgb(252,227,138, 0.9) 0%, rgb(243,129,129, 0.9) 100%);
 	transition-duration: 0.2s;
 	transition-timing-function: linear;
 }
@@ -247,26 +247,27 @@ overflow: hidden;
 }
 
 .icon{
+	display: inline-block;
 	width: 56px;
 	height: 56px;
 	border:none;
 	background-color: #fce38a;
 	cursor: pointer;
 	
+	
 }
 
 .background{
 	width: 380px;
 	height: 470px;
-	background: linear-gradient( to top, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
-	opacity: 0;
+	background: linear-gradient( to top, rgb(252,227,138, 0) 0%, rgb(243,129,129, 0) 100%);
 	position: absolute;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.foto-item:hover .shadow{
+.main-foto:hover .shadow{
 	box-shadow: 10px 10px;
 	color: #95e1d3;
 	transition-duration: 0.2s;
@@ -284,7 +285,12 @@ overflow: hidden;
 .icon-item:not(:last-child){
 	border-right: 1px solid #f38181;
 }
-
+.icon-item{
+	opacity: 0;
+}
+.background:hover .icon-item{
+	opacity: 1;
+}
 .name{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
